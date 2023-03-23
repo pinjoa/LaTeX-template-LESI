@@ -1,0 +1,85 @@
+% ---
+% template desenvolvido inicialmente por (DC-LESI) Prof Alberto Simões
+% modificado/melhorado por João Carlos Pinto (#20808) LESI-PL 2020-23
+% ---
+\documentclass[a4paper,12pt,twoside]{book}
+\usepackage{lesi/lesi}
+\usepackage{fancyvrb}
+
+\title{Projeto Unicórnio}
+% utilizar \AND para mais do que um autor
+\author{João Carlos Pinto, 20808}
+\LESI
+\regimePosLaboral         % ou \regimeDiurno
+\date{\today}
+
+%% Caso tenham mais que um orientador, colocar \AND
+\orientador{Alberto Simões}
+
+%% comentar estas três linhas para projectos
+% \empresa{Fuzzy Bit - Software Engineering}
+% \enderecoEmpresa{Barcelos, Portugal}
+% \supervisor{Eng. A. U. Thor}
+
+% comentar se não for para usar glossários
+\makeglossaries
+
+% inicio do documento
+\begin{document}
+\input{glossario}
+\input{acronimos}
+
+\frontmatter
+\maketitle  % print the title
+
+\begin{resumo}
+
+\textbf{\textcolor{Red}{Documento em construção... \\Falta completar esta secção! \\No final deves remover este comentário.}}
+
+Resumo do trabalho realizado. Deve ser sucinto, e cobrir todo o relatório: uma introdução ao problema que se pretendeu resolver, um pequeno resumo da abordagem realizada, e algumas conclusões do trabalho atingido.
+
+Poderão ser criados vários parágrafos, até para que cada um corresponda às três fases de introdução, desenvolvimento e conclusão.
+
+Não é relevante colocar no resumo o local de estágio ou a referência ao curso. Essa informação já consta da capa.
+\end{resumo}
+
+%\begin{abstract}
+%This is the translation of the previous text. It should say the exact same thing. Please do not use directly Google Translator.
+%\end{abstract}
+
+%% Comment the following part if you are not acknowledging anybody
+%\begin{agradecimentos}
+%[A secção de agradecimentos é a parte pessoal do documento, e o único sítio onde o aluno pode escrever de forma menos formal, usando o tipo de linguagem que lhe parecer adequado para as pessoas a quem agradece.] 
+%\end{agradecimentos}
+
+\tableofcontents
+
+% comentar se nao tiver figuras
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+
+% comentar se nao tiver tabelas
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tabelas}
+
+% comentar se nao se quiser lista de listagens
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{Lista de Código}
+
+% Commentar proximas duas linhas se nao for para usar acronimos
+\printglossary[type=\acronymtype,title={Siglas \& Acrónimos},toctitle={Siglas \& Acrónimos}]
+
+% Commentar proximas duas linhas se nao for para usar glossarios
+\printglossary[title={Indice de Termos},toctitle={Indice de Termos}]
+
+\mainmatter
+
+\input{chap100Intro}
+\input{chap200Second}
+\input{chapX00Sample}
+
+% comentar se não for para usar bibliografia
+\bibliography{biblio}
+\addcontentsline{toc}{chapter}{Bibliografia}
+
+\end{document}  
